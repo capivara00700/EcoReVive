@@ -18,6 +18,10 @@ html ::-webkit-scrollbar-thumb{
     border-radius: 50px;
 }
 
+p{
+    font-family: liter;
+}
+
 /*--fonte-personazada--*/
 @font-face{
     font-family: "MoonDance";
@@ -126,6 +130,14 @@ html ::-webkit-scrollbar-thumb{
         transform: rotate(-135deg);
         top: -7px;
     }
+}
+
+/*--Banner-Intercalação*/
+.img-inter{
+    border: 5px solid white;
+    border-radius: 20px; 
+    display: block;
+    margin: 0 auto;
 }
 
 /*--Banner-inicial--*/

@@ -29,7 +29,7 @@ html ::-webkit-scrollbar-thumb{
     src: url("font/Liter-Regular.ttf");
 }
 
-/*--Menu Nav--*/
+/*--NavBar--*/
 .link-menuNav{
     font-weight: bold;
     color: black;
@@ -42,15 +42,19 @@ html ::-webkit-scrollbar-thumb{
     color: rgb(89, 147, 37);
 }
 
+.navbar-nav img{
+    display: none;
+}
+
 @media(max-width:992px){
     .navbar-nav{
         z-index: 0;
         position: absolute;
         position: fixed;
-        top: 0px;
-        right: -50vw;
+        top: 0vw;
+        left: -50vw;
         width: 50vw;
-        height: 130vw;
+        height: 1000vw;
         background: white;
         flex-direction: column;
         align-items: center;
@@ -104,6 +108,10 @@ html ::-webkit-scrollbar-thumb{
         display: none;
     }
 
+    .navbar-nav img{
+        display: block;
+    }    
+
     .navbar.active .hamburguer{
         top: 26px;
         right: 16px;
@@ -120,15 +128,22 @@ html ::-webkit-scrollbar-thumb{
     }
 }
 
-/*--Tela incial--*/
+/*--Banner-inicial--*/
 #banner-inicio{
     background: urL(img/teste3.jpg) no-repeat;
     background-size: 100%;
-    height: 88%;
+    height: 50vw;
 }
 
 #banner-inicio span{
     font-family: MoonDance;
+}
+
+@media(max-width: 992px){
+    #banner-inicio{
+        font-size: 0.5em;
+        height: 65vw;
+    }
 }
 
 .area-textos{

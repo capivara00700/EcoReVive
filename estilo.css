@@ -47,7 +47,7 @@ html ::-webkit-scrollbar-thumb{
         z-index: 0;
         position: absolute;
         position: fixed;
-        top: 15vw;
+        top: 0px;
         right: -50vw;
         width: 50vw;
         height: 130vw;

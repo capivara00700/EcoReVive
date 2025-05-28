@@ -22,6 +22,11 @@ p{
     font-family: liter;
 }
 
+img{
+    border: 5px solid white;
+    border-radius: 20px;
+}
+
 /*--fonte-personazada--*/
 @font-face{
     font-family: "MoonDance";
@@ -133,9 +138,7 @@ p{
 }
 
 /*--Banner-Intercalação*/
-.img-inter{
-    border: 5px solid white;
-    border-radius: 20px; 
+.img-inter{ 
     display: block;
     margin: 0 auto;
 }
@@ -175,14 +178,10 @@ p{
 /*--Area-conteudos--*/
 .img-principal{
     margin-left: 15%;
-    border: 5px solid white;
-    border-radius: 20px;
 }
 
 .img-secundaria{
-    margin-left: 15%;
-    border: 5px solid white;
-    border-radius: 20px;    
+    margin-left: 15%;  
 
     position: relative;
     left: 35%;
@@ -197,7 +196,7 @@ p{
 
     .img-secundaria{
         position: relative;
-        left: -30px;
+        left: -120px;
         bottom: 60px;
         z-index: 2;
     }    

@@ -1,0 +1,145 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html,body{
+    height: 100%;
+}
+
+/*--Scroll--*/
+html ::-webkit-scrollbar{
+    width: 7px;
+}
+
+html ::-webkit-scrollbar-thumb{
+    background-color: rgb(89, 147, 37);
+    padding: 10px;
+    border-radius: 50px;
+}
+
+/*--fonte-personazada--*/
+@font-face{
+    font-family: "MoonDance";
+    src: url("font/MoonDance-Regular.ttf");
+}
+
+@font-face{
+    font-family: "Liter";
+    src: url("font/Liter-Regular.ttf");
+}
+
+/*--Menu Nav--*/
+.link-menuNav{
+    font-weight: bold;
+    color: black;
+    font-size: 1.1em;
+    padding: 15px;
+    align-items: center;
+}
+
+.link-menuNav a:hover{
+    color: rgb(89, 147, 37);
+}
+
+@media(max-width:768px){
+    .navbar-nav{
+        position: absolute;
+        position: fixed;
+        top: 15vw;
+        right: -50vw;
+        width: 50vw;
+        height: 130vw;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+#link-custom a{
+    background: rgb(89, 147, 37);
+    color:white;
+    margin-top: 6px;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+#link-custom a:hover{
+    background: rgb(60, 100, 25);    
+}
+
+/*--Botão hamburguer--*/
+.hamburguer{
+    border: none;
+    background: none;
+    border-top: 3px solid black;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburguer::before,
+.hamburguer::after{
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: black;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+}
+
+@media(max-width: 768px) {
+    .hamburguer{
+        display: block;
+        z-index: 2;
+        top: 26px;
+        right: 16px;
+        margin-right: 5%;
+    }
+
+    .navbar-nav{
+        display: none;
+    }
+
+    .navbar.active .hamburguer{
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+    }
+
+    .navbar.active .hamburguer::before{
+        transform: rotate(135deg);
+    }
+
+    .navbar.active .hamburguer::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
+
+/*--Tela incial--*/
+#banner-inicio{
+    background: urL(img/teste3.jpg) no-repeat;
+    background-size: 100%;
+    height: 88%;
+}
+
+#banner-inicio span{
+    font-family: MoonDance;
+}
+
+.area-textos{
+    margin-right: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: liter;
+}
+
+#txt-banner{
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+}

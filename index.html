@@ -25,11 +25,10 @@
             <!--Links-->
             <ul class="navbar-nav">
                 <img src="img/logoSF.png" class="img-fluid" width="70px" style="margin-top: 15px;">
-                <li class="nav-item link-menuNav"><a class="nav-link" href="#">Link1</a></li>
-                <li class="nav-item link-menuNav"><a class="nav-link" href="#">Link2</a></li>
-                <li class="nav-item link-menuNav"><a class="nav-link" href="#">Link3</a></li>
-                <li class="nav-item link-menuNav"><a class="nav-link" href="#">Link4</a></li>
-                <li class="nav-item link-menuNav" id="link-custom"><a class="nav-link" href="#">Link5</a></li>
+                <li class="nav-item link-menuNav"><a class="nav-link" href="#instrucoes">Instruções</a></li>
+                <li class="nav-item link-menuNav"><a class="nav-link" href="#observacoes">Observações</a></li>
+                <li class="nav-item link-menuNav"><a class="nav-link" href="#Publico">Público-alvo</a></li>
+                <li class="nav-item link-menuNav" id="link-custom"><a class="nav-link" href="#Objetivos">Objetivos</a></li>
             </ul>
             <!--Botão hamburguer-->
             <button class="hamburguer"></button>
@@ -50,9 +49,9 @@
     <br/><br/>
 
     <!--Banner intercalação-->
-    <section class="container">
+    <section class="container hidden">
         <div class="row ">
-            <div class="col-sm">
+            <div class="col-sm mt-3">
                 <h3 class="d-flex justify-content-center display-6">Missão</h3>
                 <p class="text-center">Promover o acesso à energia limpa e acessível por meio do reaproveitamento de resíduos orgânicos, incentivando a autonomia energética e a educação ambiental.</p>    
                 <img src="img/terra.jpg" class="img-fluid img-inter" width="200px">
@@ -75,10 +74,10 @@
         </div>
     </section>
 
-    <br/><br/>
+    <br/>
 
     <!--Conteudo principal-->
-    <section>
+    <section class="hidden" id="instrucoes">
         <div class="container mt-5">
             <div class="row reverse">
                 <div class="col-sm">
@@ -105,7 +104,7 @@
     <br/>
 
     <!--Conteudo principal PT2--> 
-    <section>
+    <section class="hidden" id="observacoes">
         <div class="container mt-5">
             <div class="row">
                 <div class="col-sm text-center">
@@ -127,20 +126,50 @@
         </div>        
     </section>
 
+    <!--Conteudo principal PT3--> 
+    <section class="hidden" id="Publico">
+        <div class="container mt-5">
+            <div class="row reverse">
+                <div class="col-sm">
+                    <img src="img/caixa.jpeg" width="320px" class="img-fluid" style="display: block; margin: 0 auto;">
+                </div>
+                <div class="col-sm text-center">
+                    <div class="d-flex justify-content-center">
+                        <h1 class="display-5">Público-alvo</h1>
+                    </div>
+                    <div class="d-flex mt-2">
+                        <p>• Comunidades de baixa renda: especialmente em áreas rurais, ribeirinhas, indígenas ou periféricas, com acesso limitado à energia elétrica ou gás de cozinha.</p>
+                    </div>
+                    <div>
+                        <p>• Famílias preocupadas com sustentabilidade: consumidores interessados em reduzir o impacto ambiental de seus resíduos e economizar na conta de energia/gás.</p>
+                    </div>
+                    <div>
+                        <p>• Instituições educativas e ONGs: que buscam projetos para fomentar educação ambiental e práticas sustentáveis.</p>
+                    </div>
+                    <div>
+                        <p>• Pequenos produtores ou agricultores: que possam usar biodigestores domésticos para transformar resíduos em energia.</p>
+                    </div>
+                    <div>
+                        <p>• Municípios ou órgãos públicos: com políticas de incentivo à energia renovável e gestão de resíduos sólidos.</p>
+                    </div>
+                </div>
+            </div>      
+        </div>        
+    </section>
+
     <!--Objetivos-->
-    <section class="mt-5">
+    <section class="mt-5 hidden" id="Objetivos">
         <div class="obj-banner">
-            <div class="d-flex justify-content-center" style="padding-top: 16%;">
+            <div class="d-flex justify-content-center obj">
                 <h1 id="obj-txt" class="display-6">Objetivos</h1>
             </div>
         </div>
         <div class="container">
             <div class="row mt-4">
-                <div class="col-sm mt-2">
+                <div id="b-b" class="col-sm mt-2 mb-3">
                     <h4 class="text-center display-6 mb-4">Objetivo Geral:</h4>
                     <p style="padding-inline: 10%; letter-spacing: 0.5px;">Desenvolver uma solução sustentável e de baixo custo para geração de biogás em escala doméstica, utilizando resíduos orgânicos comuns e acessíveis, a fim de contribuir para o acesso à energia limpa, promover a educação ambiental e estimular práticas de reaproveitamento energético, em conformidade com os princípios da ODS 7 da Agenda 2030.</p>
                 </div>
-                <hr/>
                 <div class="col-sm">
                     <h4 class="text-center display-6 mb-4">Objetivos Específicos:</h4>
                     <p style="padding-inline: 10%;">• Identificar os principais resíduos orgânicos viáveis para a produção doméstica de biogás.</p>
@@ -153,9 +182,8 @@
         </div>
     </section>
 
-    <footer style="height: 10px; background:rgb(44, 44, 44); width: 100%; margin-top: 50px;">
-
-    </footer>
+    <!--Rodapé-->
+    <footer style="height: 10px; background: white; width: 100%; margin-top: 50px;"> </footer>
 
 <script src="script.js"></script>
 </body>

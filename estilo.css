@@ -217,7 +217,6 @@ img{
 
 @media(max-width: 992px){
     .obj-banner{
-        background-size: 100%;
         height: 50vw;
     }
     

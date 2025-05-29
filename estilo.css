@@ -39,6 +39,17 @@ img{
     src: url("font/Liter-Regular.ttf");
 }
 
+/*--Hidden--*/
+.hidden{
+    opacity: 0;
+    transition: all 2s;
+}
+
+.show{
+    opacity: 1;
+    transition: all 2s;
+}
+
 /*--NavBar--*/
 .link-menuNav{
     font-weight: bold;
@@ -215,12 +226,24 @@ img{
     font-size: 6em;
 }
 
+.obj{
+    padding-top: 13%;
+}
+
 @media(max-width: 992px){
     .obj-banner{
-        height: 50vw;
+        height: 70vw;
     }
     
     #obj-txt{
         font-size: 3em;
+    }
+
+    .obj{
+        padding-top: 23%;    
+    }
+
+    #b-b{
+        border-bottom: 1px solid rgb(190, 187, 187);
     }
 }

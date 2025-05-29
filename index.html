@@ -1,190 +1,293 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoReViva</title>
-    <link rel="stylesheet" href="estilo.css">
-    <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-    <!--JQuery-->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+*{
+    margin: 0px;
+    padding: 0px;
+}
 
-    <!--Icone-->
-    <link rel="icon" href="img/logoSF.png" type="ico-x-icon">
+html,body{
+    height: 100%;
+}
 
-</head>
-<body>
+/*--Scroll--*/
+html ::-webkit-scrollbar{
+    width: 7px;
+}
+
+html ::-webkit-scrollbar-thumb{
+    background-color: rgb(89, 147, 37);
+    padding: 10px;
+    border-radius: 50px;
+}
+
+p{
+    font-family: liter;
+    text-align: center;
+}
+
+img{
+    border: 5px solid white;
+    border-radius: 20px;
+}
+
+/*--fonte-personalizada--*/
+@font-face{
+    font-family: "MoonDance";
+    src: url("font/MoonDance-Regular.ttf");
+}
+
+@font-face{
+    font-family: "Liter";
+    src: url("font/Liter-Regular.ttf");
+}
+
+/*--Hidden--*/
+.hidden{
+    opacity: 0;
+    transition: all 2s;
+}
+
+.show{
+    opacity: 1;
+    transition: all 2s;
+}
+
+/*--NavBar--*/
+.link-menuNav{
+    font-weight: bold;
+    color: black;
+    font-size: 1.1em;
+    padding: 15px;
+    align-items: center;
+}
+
+.link-menuNav a:hover{
+    color: rgb(89, 147, 37);
+}
+
+.navbar-nav img{
+    display: none;
+}
+
+@media(max-width:992px){
+    .navbar-nav{
+        z-index: 6;
+        position: absolute;
+        position: fixed;
+        top: 0vw;
+        left: -50vw;
+        width: 50vw;
+        height: 1000vw;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+#link-custom a{
+    background: rgb(89, 147, 37);
+    color:white;
+    margin-top: 6px;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+#link-custom a:hover{
+    background: rgb(60, 100, 25);    
+}
+
+/*--Botão hamburguer--*/
+.hamburguer{
+    border: none;
+    background: none;
+    border-top: 3px solid black;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburguer::before,
+.hamburguer::after{
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: black;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+}
+
+@media(max-width: 992px) {
+    .hamburguer{
+        display: block;
+        z-index: 1;
+        top: 26px;
+        right: 16px;
+        margin-right: 5%;
+    }
+
+    .navbar-nav{
+        display: none;
+    }
+
+    .navbar-nav img{
+        display: block;
+    }    
+
+    .navbar.active .hamburguer{
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+    }
+
+    .navbar.active .hamburguer::before{
+        transform: rotate(135deg);
+    }
+
+    .navbar.active .hamburguer::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
+
+/*--Banner-inicial--*/
+#banner-inicio{
+    background: urL(img/teste3.jpg) no-repeat;
+    background-size: 100%;
+    height: 50vw;
+}
+
+#banner-inicio span{
+    font-family: MoonDance;
+}
+
+@media(max-width: 992px){
+    #banner-inicio{
+        font-size: 0.5em;
+        height: 65vw;
+    }
+}
+
+.area-textos{
+    margin-right: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: liter;
+}
+
+#txt-banner{
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+}
+
+/*--Banner-Intercalação*/
+.img-inter{ 
+    display: block;
+    margin: 0 auto;
+}
+
+/*--Area-conteudos--*/
+.img-principal{
+    margin-left: 15%;
+}
+
+.img-principal-1{
+    margin-left: 5%;
+}
+
+.img-secundaria{
+    margin-left: 15%;  
+
+    position: relative;
+    left: 35%;
+    bottom: 10%;
+    z-index: 2;
+}
+
+.img-secundaria-1{
+    margin-left: 15%;  
+
+    position: relative;
+    left: -9%;
+    bottom: 0%;
+    z-index: 3;
+}
+
+.img-terceira{
+    margin-left: 15%;  
+
+    position: relative;
+    left: 30%;
+    bottom: 50%;
+    z-index: 2; 
+}
+
+@media(max-width: 992px){
+    .img-principal{
+        width: 300px;
+    }
+
+    .img-principal-1{
+        width: 300px;
+        margin-left: 15%;
+    }
+
+    .img-secundaria-1{
+        margin-left: 15%;  
     
-   <!--NavBar--> 
-    <nav class="navbar navbar-expand-lg navbar-white">
-        <div class="container teste">
-            <img src="img/logo.png" class="navbar-brand img-fluid" width="120px" style="padding: 0px;">
-            <!--Links-->
-            <ul class="navbar-nav">
-                <img src="img/logoSF.png" class="img-fluid" width="70px" style="margin-top: 15px;">
-                <li class="nav-item link-menuNav"><a class="nav-link" href="#instrucoes">Instruções</a></li>
-                <li class="nav-item link-menuNav"><a class="nav-link" href="#observacoes">Observações</a></li>
-                <li class="nav-item link-menuNav"><a class="nav-link" href="#Publico">Público-alvo</a></li>
-                <li class="nav-item link-menuNav" id="link-custom"><a class="nav-link" href="#Objetivos">Objetivos</a></li>
-            </ul>
-            <!--Botão hamburguer-->
-            <button class="hamburguer"></button>
-        </div>
-    </nav>
+        width: 225px;
+        position: relative;
+        left: -15%;
+        top: -40px;
+        z-index: 2;
+    }
+
+    .img-terceira{
+        width: 200px;
+
+        left: 28%;
+        bottom: 140px;
+    }
+
+    .img-secundaria{
+        position: relative;
+        left: -120px;
+        bottom: 60px;
+        z-index: 2;
+    }    
+}
+
+/*--OBJ--*/
+.obj-banner{
+    background: urL(img/terra3.jpg) no-repeat;
+    background-size: 100%;
+    height: 40vw;
+}
+
+#obj-txt{
+    color: white;
+    font-size: 6em;
+}
+
+.obj{
+    padding-top: 13%;
+}
+
+@media(max-width: 992px){
+    .obj-banner{
+        height: 70vw;
+    }
     
-    <!--Banner principal-->
-    <section id="banner-inicio">
-        <div class="container" style="height: 100%;">
-            <div class="row" style="height: 100%;">
-                <div class="col-6 area-textos">
-                    <h1 id="txt-banner"><span style="color: rgb(83, 88, 87);">Eco</span><span style="color: rgb(60, 100, 25);">Re</span><span style="color: rgb(252, 209, 67);">Viva</span> Transformando resíduos em energia, e esperança em futuro.</h1>
-                </div>
-            </div>
-        </div>
-    </section>
+    #obj-txt{
+        font-size: 3em;
+    }
 
-    <br/><br/>
+    .obj{
+        padding-top: 23%;    
+    }
 
-    <!--Banner intercalação-->
-    <section class="container hidden">
-        <div class="row ">
-            <div class="col-sm mt-3">
-                <h3 class="d-flex justify-content-center display-6">Missão</h3>
-                <p class="text-center">Promover o acesso à energia limpa e acessível por meio do reaproveitamento de resíduos orgânicos, incentivando a autonomia energética e a educação ambiental.</p>    
-                <img src="img/terra.jpg" class="img-fluid img-inter" width="200px" style="min-width: 200px;">
-            </div>
-            <div class="col-sm mt-3">
-                <h3 class="d-flex justify-content-center display-6">Valores</h3>
-                <p class="text-center">Sustentabilidade
-                    Inclusão social
-                    Educação ambiental
-                    Inovação acessível
-                    Economia circular
-                    Empoderamento comunitário</p>
-                <img src="img/lixo.jpg" class="img-fluid img-inter mt-4" width="200px" style="min-width: 200px;">
-            </div>
-            <div class="col-sm mt-3">
-                <h3 class="d-flex justify-content-center display-6">Visão</h3>
-                <p class="text-center">Ser referência em soluções sustentáveis e acessíveis de energia limpa no Brasil, contribuindo para a redução das desigualdades energéticas.</p>
-                <img src="img/placa.jpg" class="img-fluid img-inter mt-3" width="200px" style="min-width: 200px;"> 
-            </div>
-        </div>
-    </section>
-
-    <br/><br/>
-
-    <!--Conteudo principal-->
-    <section class="hidden" id="instrucoes">
-        <div class="container mt-5">
-            <div class="row reverse">
-                <div class="col-sm">
-                    <img src="img/caixaf2.jpeg" width="450px" class="img-fluid img-principal-1">
-                    <img src="img/caixa.jpeg" width="250px" class="img-fluid img-secundaria-1">
-                    <img src="img/caixaf.jpeg" width="300px" class="img-fluid img-terceira">
-                </div>
-                <div class="col-sm text-center">
-                    <div class="d-flex justify-content-center">
-                        <h1 class="display-5">INSTRUÇÕES</h1>
-                    </div>
-                    <div class="d-flex justify-content-start mt-2">
-                        <p>Ao adquirir nosso produto, aconselhamos veementemente ler e seguir as instruções aqui deixadas:</p>
-                    </div>
-                    <div class="d-flex justify-content-end">
-                        <p>Selecionar o recipiente correto para armazenar os resíduos (balde plástico resistente, tambor de PVC, galão de 50 a 200l, e outros...) e um para conservar o gás gerado (como bolsa de PVC ou TPU, ou até em botijão adaptado).</p>
-                    </div>
-                    <div class="d-flex justify-content-center">
-                        <p>Após selecionados, manusear o composto orgânico com luvas nitrílicas ou cirúrgicas, assim, levando o produto armazenado por cerca de 30 dias, para que no fim o biogás possa ser usufruído corretamente em qualquer que seja seu destino.</p>
-                    </div>
-                </div>
-            </div>      
-        </div>        
-    </section>
-
-    <!--Conteudo principal PT2--> 
-    <section class="hidden" id="observacoes">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm text-center">
-                    <div class="d-flex justify-content-center">
-                        <h1 class="display-5">OBSERVAÇÕES</h1>
-                    </div>
-                    <div class="d-flex justify-content-start mt-2">
-                        <p>É de suma importância que o consumidor armazene o produto e o recipiente em local que não tenha contato direto com a irradiação solar, materiais inflamáveis ou que possam gerar combustão. Após os 30 dias, destinar o biogás gerado o quão antes possível para seu consumo (como chuveiro, botijão de cozinha e outros).</p>
-                    </div>
-                    <div class="d-flex justify-content-end">
-                        <p>Deixar longe de crianças, é aconselhável fazer o manuseio do produto fora da visão dos anteriormente citados e guardá-lo em locais mais altos para evitar o possível alcance de indivíduos menores de 8 anos.</p>
-                    </div>
-                </div>
-                <div class="col-sm text-center">
-                    <img src="img/reciclagem.jpg" width="450px" class="img-fluid img-principal">
-                    <img src="img/lixo2.jpg" width="200px" class="img-fluid img-secundaria">
-                </div>
-            </div>      
-        </div>        
-    </section>
-
-    <!--Conteudo principal PT3--> 
-    <section class="hidden" id="Publico">
-        <div class="container mt-3">
-            <div class="row reverse">
-                <div class="col-sm">
-                    <img src="img/pessoas.jpg" width="250px" class="img-fluid" style="display: block; margin: 0 auto;">
-                </div>
-                <div class="col-sm text-center">
-                    <div class="d-flex justify-content-center">
-                        <h1 class="display-5">Público-alvo</h1>
-                    </div>
-                    <div class="d-flex mt-2">
-                        <p>• Comunidades de baixa renda: especialmente em áreas rurais, ribeirinhas, indígenas ou periféricas, com acesso limitado à energia elétrica ou gás de cozinha.</p>
-                    </div>
-                    <div>
-                        <p>• Famílias preocupadas com sustentabilidade: consumidores interessados em reduzir o impacto ambiental de seus resíduos e economizar na conta de energia/gás.</p>
-                    </div>
-                    <div>
-                        <p>• Instituições educativas e ONGs: que buscam projetos para fomentar educação ambiental e práticas sustentáveis.</p>
-                    </div>
-                    <div>
-                        <p>• Pequenos produtores ou agricultores: que possam usar biodigestores domésticos para transformar resíduos em energia.</p>
-                    </div>
-                    <div>
-                        <p>• Municípios ou órgãos públicos: com políticas de incentivo à energia renovável e gestão de resíduos sólidos.</p>
-                    </div>
-                </div>
-            </div>      
-        </div>        
-    </section>
-
-    <!--Objetivos-->
-    <section class="mt-5 hidden" id="Objetivos">
-        <div class="obj-banner">
-            <div class="d-flex justify-content-center obj">
-                <h1 id="obj-txt" class="display-6">Objetivos</h1>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row mt-4">
-                <div id="b-b" class="col-sm mt-2 mb-3">
-                    <h4 class="text-center display-6 mb-4">Objetivo Geral:</h4>
-                    <p style="padding-inline: 10%; letter-spacing: 0.5px;">Desenvolver uma solução sustentável e de baixo custo para geração de biogás em escala doméstica, utilizando resíduos orgânicos comuns e acessíveis, a fim de contribuir para o acesso à energia limpa, promover a educação ambiental e estimular práticas de reaproveitamento energético, em conformidade com os princípios da ODS 7 da Agenda 2030.</p>
-                </div>
-                <div class="col-sm">
-                    <h4 class="text-center display-6 mb-4">Objetivos Específicos:</h4>
-                    <p style="padding-inline: 10%;">• Identificar os principais resíduos orgânicos viáveis para a produção doméstica de biogás.</p>
-                    <p style="padding-inline: 10%;">• Criar um protótipo funcional de composteira adaptada à produção de biogás.</p>
-                    <p style="padding-inline: 10%;">• Avaliar a viabilidade técnica, econômica e ambiental do sistema proposto.</p>
-                    <p style="padding-inline: 10%;">• Elaborar um manual educativo com orientações práticas de uso para comunidades de baixa renda.</p>
-                    <p style="padding-inline: 10%;">• Estimular a conscientização sobre o uso de fontes alternativas de energia e a redução do impacto ambiental do descarte inadequado de resíduos.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--Rodapé-->
-    <footer style="height: 10px; background: white; width: 100%; margin-top: 50px;"> </footer>
-
-<script src="script.js"></script>
-</body>
-</html>
+    #b-b{
+        border-bottom: 1px solid rgb(190, 187, 187);
+    }
+}

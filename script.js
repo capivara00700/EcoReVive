@@ -32,11 +32,15 @@ $('.nav-link').on('click', () => {
 //Conteudo principal
 let janela = $('section').find('.reverse')
 let tamanho = innerWidth
+RedimencionaJanela()
 
-if(tamanho < 992){
-    $(janela).addClass('flex-column-reverse')
-} else {
-    $(janela).removeClass('flex-column-reverse')    
+function RedimencionaJanela(){
+    let tamanho = innerWidth
+    if(tamanho < 992){
+        $(janela).addClass('flex-column-reverse')
+    } else {
+        $(janela).removeClass('flex-column-reverse')    
+    }
 }
 
 //Animação opacidade
